@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Billie Eilish songs</title>
+        <style>
+            html
+            {
+                width: 100%;
+                height: 100%;
+            }
+
+            body
+            {
+                margin: 0;
+                padding: 0;
+                background-color: #178913;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 100%;
+            }
+
+            .contentHolder
+            {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+
+            .circle
+            {
+                width: 200px;
+                height: 200px;
+                background-color: none;
+                border: 20px solid black;
+                border-radius: 50%;
+                animation: spin 1s infinite forwards;
+            }
+
+            .blocker
+            {
+                z-index: 3;
+                width: 120px;
+                height: 120px;
+                background-color: #178913;
+                position: relative;
+                top: -20px;
+                left: -20px;
+            }
+
+            #left_arrow img
+            {
+                rotate: -90deg;
+            }
+
+            #right_arrow img
+            {
+                rotate: 90deg;
+            }
+
+            .arrow
+            {
+                width: 100px;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .arrow img
+            {
+                width: 80px;
+                height: 80px;
+                cursor: pointer;
+            }
+
+            .invisible
+            {
+                display: none;
+            }
+
+            @keyframes spin {
+                0%
+                {
+                    rotate: 0deg;
+                }
+                /* 50%
+                {
+                    rotate: 0deg;
+                } */
+                100%
+                {
+                    rotate: 360deg;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="left_arrow" class="arrow">
+            <img src="arrow.png" class="invisible">
+        </div>
+        <div class="contentHolder">
+            <div id="anim-circle" class="circle">
+                <div class="blocker"></div>
+            </div>
+        </div>
+        <div id="right_arrow" class="arrow">
+            <img src="arrow.png" class="invisible">
+        </div>
+        <script src="gui.js"></script>
+    </body>
+</html>
